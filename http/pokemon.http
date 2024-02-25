@@ -1,15 +1,18 @@
+# @host = 03-pokedex-production-3ab7.up.railway.app
+@host = localhost:3000
+
 
 ###  get all
-GET http://localhost:3000/api/v2/pokemon
+GET http://{{host}}/api/v2/pokemon
 
 ###  get all queryParamaters
-GET http://localhost:3000/api/v2/pokemon?limit=2&offset=2
+GET http://{{host}}/api/v2/pokemon?limit=2&offset=2
 
 ###  get by id 
-GET http://localhost:3000/api/v2/pokemon/bulbasaur
+GET http://{{host}}/api/v2/pokemon/bulbasaur
 
 ###  create
-POST  http://localhost:3000/api/v2/pokemon HTTP/1.1
+POST  http://{{host}}/api/v2/pokemon HTTP/1.1
 content-type: application/json
 
 {
@@ -18,7 +21,7 @@ content-type: application/json
 }
 
 ###  update
-PATCH   http://localhost:3000/api/v2/pokemon/65c6d08b7c74e1fcac07b80e
+PATCH   http://{{host}}/api/v2/pokemon/65c6d08b7c74e1fcac07b80e
 content-type: application/json
 
 {
@@ -27,6 +30,6 @@ content-type: application/json
 }
 
 ###  delete
-DELETE  http://localhost:3000/api/v2/pokemon/65cd2a7ae48e9e2ff306ed94
+DELETE  http://{{host}}/api/v2/pokemon/65cd2a7ae48e9e2ff306ed94
 content-type: application/json
 

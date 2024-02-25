@@ -36,6 +36,17 @@ docker-compose up -d
 
 GET http://localhost:3000/api/v2/seed
 
+### Build production
+
+1. Create ```.env.prod```
+2. fill environment variables to prod
+3. create new image
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+refs :
+https://gist.github.com/Klerith/e7861738c93712840ab3a38674843490
+
 
 ## Stack
 * Nest
