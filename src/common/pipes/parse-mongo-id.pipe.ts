@@ -12,6 +12,6 @@ export class ParseMongoIdPipe implements PipeTransform {
     if (!isValidObjectId(value)) {
       throw new BadRequestException(`${value} is not a valid mongo id `);
     }
-    return value.toUpperCase();
+    return value;
   }
 }
